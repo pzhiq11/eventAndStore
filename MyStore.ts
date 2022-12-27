@@ -1,22 +1,22 @@
-const isDef = (val) =>
-  val !== "" && val !== undefined && val !== null && String(val) !== "NaN";
-const isUndef = (val) =>
-  val === "" || val === undefined || val === null || String(val) === "NaN";
+// const isDef = (val) =>
+//   val !== "" && val !== undefined && val !== null && String(val) !== "NaN";
+// const isUndef = (val) =>
+//   val === "" || val === undefined || val === null || String(val) === "NaN";
 const isArray = (val) =>
   typeof val === "object" && {}.toString.call(val) === "[object Array]";
-const isObject = (o) => {
-  const type = typeof o;
-  return o != null && (type === "object" || type === "function");
-};
-const isPlainObject = (o) => {
-  const type = typeof o;
-  return (
-    o != null && type === "object" && {}.toString.call(o) === "[object Object]"
-  );
-};
-const isString = (s) => {
-  return typeof s === "string";
-};
+// const isObject = (o) => {
+//   const type = typeof o;
+//   return o != null && (type === "object" || type === "function");
+// };
+// const isPlainObject = (o) => {
+//   const type = typeof o;
+//   return (
+//     o != null && type === "object" && {}.toString.call(o) === "[object Object]"
+//   );
+// };
+// const isString = (s) => {
+//   return typeof s === "string";
+// };
 const isInteger = (n) => {
   return Number.isInteger(n); // || typeof n === 'number' && isFinite(n) && Math.ceil(n) === n
 };
@@ -26,10 +26,6 @@ const isNatural = (n) => {
 const pathReg = /\//;
 const isComplexPath = (s) => {
   return pathReg.test(s);
-};
-
-const showError = (s) => {
-  console.error(s);
 };
 /**
  * 让数组的变化可被监听
@@ -266,5 +262,4 @@ class Store {
   }
 }
 
-const MyStore = new Store();
-export default MyStore;
+export default new Store();

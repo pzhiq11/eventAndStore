@@ -3,7 +3,7 @@ interface EventItem {
   ctx: unknown;
 }
 class MyEvent {
-  public static inst: MyEvent = new MyEvent();
+  // public static inst: MyEvent = new MyEvent();
   private eventDic: Map<string, Array<EventItem>> = new Map();
 
   on(eventName: string, fn: Function, ctx?: unknown) {
@@ -16,9 +16,7 @@ class MyEvent {
 
   off(eventName: string, fn: Function) {
     if (this.eventDic.has(eventName)) {
-      const idx = this.eventDic
-        .get(eventName)
-        ?.findIndex((item) => item.fn === fn) as number;
+      const idx = this.eventDic.get(eventName)?.findIndex((item) => item.fn === fn);
       idx > -1 && this.eventDic.get(eventName)?.splice(idx, 1);
     }
   }
@@ -35,6 +33,4 @@ class MyEvent {
     this.eventDic.clear();
   }
 }
-const myEvent: MyEvent = new MyEvent();
-export default myEvent;
-type Value = string | number | Array<any> | Object;
+export default new MyEvent();
