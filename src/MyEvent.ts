@@ -4,7 +4,7 @@ interface EventItem {
 }
 class MyEvent {
   // public static inst: MyEvent = new MyEvent();
-  private eventDic: Map<string, Array<EventItem>> = new Map();
+  public eventDic: Map<string, Array<EventItem>> = new Map();
 
   on(eventName: string, fn: Function, ctx?: unknown) {
     if (this.eventDic.has(eventName)) {

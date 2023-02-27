@@ -36,6 +36,6 @@
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true
   },
-  "include": ["*","./src/**/*", "./typings", "dist/index.ts"],
+  "include": ["*","./src/**/*", "./typings", "dist/index.ts", "test/test.ts", "test/test.ts"],
   "exclude": ["./node_modules","./dist"]
 }

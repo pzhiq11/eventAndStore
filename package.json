@@ -1,11 +1,11 @@
 {
-  "name": "storeandevent",
+  "name": "@pzhiq/esm",
   "version": "1.0.0",
-  "description": "事件分发与数据管理",
-  "main": "test.ts",
+  "description": "事件分发与数据管理 Event And Store Manage",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "P",
+  "author": "pzhiq",
   "license": "ISC"
 }
