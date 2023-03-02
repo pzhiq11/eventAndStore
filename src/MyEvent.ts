@@ -1,4 +1,4 @@
-interface EventItem {
+export interface EventItem {
   fn: Function;
   ctx: unknown;
 }

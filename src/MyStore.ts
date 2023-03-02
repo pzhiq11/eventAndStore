@@ -129,10 +129,10 @@ const dataManager = {
 
 class Store {
   
-  private store: any;
-  private nextTickCalls;
-  private attachList;
-  private pathChangeMap;
+  public store: any;
+  public nextTickCalls;
+  public attachList;
+  public pathChangeMap;
   constructor() {
     this.nextTickCalls = [];
     this.store = {};
