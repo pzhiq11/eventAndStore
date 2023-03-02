@@ -1,6 +1,4 @@
-// 事件分发管理
-// import p from "../dist/index.js"
-import p from '@pzhiq/esm'
+import p from './index'
 p.event.on("click", (time) => console.log("click:", time));
 p.event.emit("click", 2);
 

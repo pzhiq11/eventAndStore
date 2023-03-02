@@ -1,5 +1,5 @@
-import event from "./MyEvent.js";
-import store from "./MyStore.js";
+import event from "./MyEvent";
+import store from "./MyStore";
 export default {
   event,
   store,
