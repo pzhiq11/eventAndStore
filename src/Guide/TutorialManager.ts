@@ -145,7 +145,7 @@ class TutorialManager {
    * @param interval number 循序教学查询间隔时间
    * @param storageName string 存储教学信息storageName
    */
-  async init(interval = 1000, storageName = '__tutorial__shuangshiyi') {
+  async init(interval = 1000, storageName = '__tutorial__1111') {
     try {
       await getUserId()
       this.storageName = storageName;
@@ -192,7 +192,7 @@ class TutorialManager {
     if (!this.isPiro(tutInst)) return;
     // if (mx.store.get(StoreName.Is_layer_on_show) || mx.store.get(StoreName.Is_modal_on_show)) return;
     // @ts-ignore
-    if (window?.__POP_MANAGER__?.queue?.current) return;
+    // if (window?.__POP_MANAGER__?.queue?.current) return;
 
     const { ts } = tutInst;
     if (!ts.canStart || ts.canStart()) {
@@ -567,9 +567,9 @@ class TutorialManager {
       }
     }
 
-    requestAnimationFrame(() => {
-      this.update();
-    });
+    // requestAnimationFrame(() => {
+    //   this.update();
+    // });
     this.popStack();
   }
 

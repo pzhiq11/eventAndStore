@@ -12,13 +12,15 @@ export async function getUserId() {
     return '';
   }
 }
-
+let localStorage ={};
 export function setStorage(key: string, item: string) {
   console.log(`set storeage${userId}${key}`);
-  localStorage.setItem(userId + key, item);
+  // localStorage.setItem(userId + key, item);
+  localStorage[userId + key] = item;
 }
 
 export function getStorage(key: string) {
   console.log(`get storeage${userId}${key}`);
-  return localStorage.getItem(userId + key);
+  // return localStorage.getItem(userId + key);
+  return localStorage[userId + key]
 }
