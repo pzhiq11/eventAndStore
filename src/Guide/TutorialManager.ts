@@ -1,5 +1,5 @@
 import mx from '../index';
-import { getStorage, getUserId, setStorage } from './localStorage';
+import { getStorage, getUserId, setStorage, _setUserId } from './localStorage';
 
 export interface TutSetting {
   name: string;
@@ -106,7 +106,7 @@ function isToday(s: string) {
 //   return storage.getItemSync(userId + key);
 // }
 
-class TutorialManager {
+export class TutorialManager {
   private storageName: string;
   private interval: number;
   private handler: any;
@@ -151,24 +151,27 @@ class TutorialManager {
       this.storageName = storageName;
       this.interval = interval;
       // TODO 测试记得删
-    //   const clearTutStorage = getQuery('clearTutStorage');
-    //   if (clearTutStorage) {
-    //     setStorage(storageName, '');
-    //   }
+      //   const clearTutStorage = getQuery('clearTutStorage');
+      //   if (clearTutStorage) {
+      //     setStorage(storageName, '');
+      //   }
       // 加载本地教学信息
       this.load(this.storageName);
       // 开启教学循环
       this.handler = setInterval(this.update, this.interval);
-    //   visibility.watch(status => {
-    //     clearInterval(this.handler);
-    //     if (status === 'visible') {
-    //       this.handler = setInterval(this.update, this.interval);
-    //     }
-    //   });
+      //   visibility.watch(status => {
+      //     clearInterval(this.handler);
+      //     if (status === 'visible') {
+      //       this.handler = setInterval(this.update, this.interval);
+      //     }
+      //   });
     } catch (error) {
       console.log(error);
     }
     this._resolve();
+  }
+  setUserId(id: string) {
+    _setUserId(id);
   }
   /**
    * 更新顺序教学

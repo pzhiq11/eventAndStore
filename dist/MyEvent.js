@@ -1,5 +1,30 @@
 "use strict";
-exports.__esModule = true;
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 var MyEvent = /** @class */ (function () {
     function MyEvent() {
         // public static inst: MyEvent = new MyEvent();
@@ -30,7 +55,7 @@ var MyEvent = /** @class */ (function () {
         if (this.eventDic.has(emitName)) {
             (_a = this.eventDic.get(emitName)) === null || _a === void 0 ? void 0 : _a.forEach(function (_a) {
                 var fn = _a.fn, ctx = _a.ctx;
-                ctx ? fn.apply(ctx, params) : fn.apply(void 0, params);
+                ctx ? fn.apply(ctx, params) : fn.apply(void 0, __spreadArray([], __read(params), false));
             });
         }
     };
@@ -39,4 +64,4 @@ var MyEvent = /** @class */ (function () {
     };
     return MyEvent;
 }());
-exports["default"] = new MyEvent();
+exports.default = new MyEvent();

@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 // const isDef = (val) =>
 //   val !== "" && val !== undefined && val !== null && String(val) !== "NaN";
 // const isUndef = (val) =>
@@ -81,7 +81,7 @@ var combingPathKey = function (param) {
     }
     var ret = {
         keys: keys,
-        path: keys.join(REG_PATH_SPLIT)
+        path: keys.join(REG_PATH_SPLIT),
     };
     return ret;
 };
@@ -132,7 +132,7 @@ var dataManager = {
                 break;
         }
         return ret;
-    }
+    },
 };
 var Store = /** @class */ (function () {
     function Store() {
@@ -263,4 +263,4 @@ var Store = /** @class */ (function () {
     };
     return Store;
 }());
-exports["default"] = new Store();
+exports.default = new Store();
