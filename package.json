@@ -1,6 +1,6 @@
 {
   "name": "@pzhiq/esm",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "事件分发与数据管理 Event And Store Manage",
   "main": "dist/index.js",
   "scripts": {
