@@ -1,6 +1,6 @@
 {
   "name": "@pzhiq/esm",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "事件分发与数据管理 Event And Store Manage",
   "main": "dist/index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "pzhiq",
   "license": "ISC",
   "dependencies": {
-    "@pzhiq/esm": "^1.0.2"
+    "@pzhiq/esm": "^1.0.4"
   }
 }
