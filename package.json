@@ -9,5 +9,6 @@
   "author": "pzhiq",
   "license": "ISC",
   "dependencies": {
-  }
+  },
+  "keywords": ["Event","Store"]
 }
